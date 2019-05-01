@@ -11,7 +11,7 @@
 
 ```bash
 docker pull nolze/binutils-all
-docker run --rm -it -v $PWD:/tmp nolze/binutils-all
+docker run --rm -it -v $PWD:/tmp nolze/binutils-all objdump -d a.out
 ```
 
 ## Development
