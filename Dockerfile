@@ -19,7 +19,7 @@ RUN apk add --no-cache --virtual .deps \
 
 WORKDIR /src
 RUN curl -L -o binutils-$PKGVER.tar.bz2 http://ftpmirror.gnu.org/binutils/binutils-$PKGVER.tar.bz2 \
- && tar xvf binutils-$PKGVER.tar.bz2
+ && tar xf binutils-$PKGVER.tar.bz2
 
 WORKDIR /build
 RUN /src/binutils-$PKGVER/configure --silent --enable-targets=all --enable-64-bit-bfd $CONFIGURATION_OPTIONS \
