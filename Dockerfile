@@ -2,11 +2,11 @@ FROM alpine:3.9 AS base
 
 LABEL maintainer="nolze <nolze@archlinux.us>"
 
-ENV PKGVER 2.32
-ENV PKGDIR /pkg
-ENV PREFIX /usr/local
-ENV PARALLEL_MAKE -j4
-ENV CONFIGURATION_OPTIONS "--disable-multilib --disable-nls"
+ENV PKGVER="2.32" \
+    PKGDIR="/pkg" \
+    PREFIX="/usr/local" \
+    PARALLEL_MAKE="-j4" \
+    CONFIGURATION_OPTIONS="--disable-multilib --disable-nls"
 
 FROM base AS build
 
